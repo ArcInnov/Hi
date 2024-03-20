@@ -1,0 +1,30 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.moving-text {
+  font-size: 36px;
+  color: #ff6600; /* Orange color */
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  animation: moveText 10s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw - 100%));
+  }
+}
